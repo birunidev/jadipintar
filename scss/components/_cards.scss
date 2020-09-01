@@ -1,0 +1,99 @@
+// Nilai card
+.nilai-card {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-radius: 10px;
+
+  &:hover {
+    .nilai-card-bg {
+      transform: scale(1.05);
+    }
+  }
+
+  .nilai-card-bg {
+    background-position: center center;
+    background-size: cover;
+    transition: 0.4s ease;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .card-img-overlay {
+    background: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  @include tablet {
+    max-width: 300px;
+  }
+}
+#nilai-card-1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../../assets/nilai-1.jpg);
+}
+#nilai-card-2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../../assets/nilai-2.jpg);
+}
+#nilai-card-3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../../assets/nilai-3.jpg);
+}
+#nilai-card-4 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../../assets/nilai-4.jpg);
+}
+#nilai-card-5 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../../assets/nilai-5.jpg);
+}
+#nilai-card-6 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../../assets/nilai-6.jpg);
+}
+// Nilai card ends
+
+// Team card
+.team-card {
+  &__img {
+    overflow: hidden;
+
+    max-width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}

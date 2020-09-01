@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Jadi Pintar</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <!-- Header, get the code from the templates folder -->
+    <div id="header"></div>
+    <div
+      class="main-jumbotron d-flex justify-content-center align-items-center"
+    >
+      <div class="container">
+        <h1 class="text-center text-white font-weight-bold">
+          Better grades start here
+        </h1>
+        <p class="lead text-white text-center">
+          Get your expert tutor, anywhere - anytime
+        </p>
+        <form action="" class="search-form-home mt-4">
+          <div class="search-input-home">
+            <input type="text" placeholder="Search Courses" />
+            <i class="fas fa-search text-secondary"></i>
+          </div>
+          <button type="submit" class="search-button">Find now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- Sign In Modal -->
+    <div
+      class="modal fade"
+      id="signIn"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signInModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog sign-modal" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-5">
+            <p class="h5 font-weight-bold text-dark">Login</p>
+          </div>
+          <div class="modal-body py-3 px-5">
+            <form action="" method="POST">
+              <div class="form-group mt-4">
+                <input
+                  type="text"
+                  class="form-control py-4"
+                  placeholder="Email Address"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  class="form-control py-4"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="defaultCheck1"
+                  />
+                  <label class="form-check-label text-dark" for="defaultCheck1">
+                    Keep me logged in
+                  </label>
+                </div>
+                <a class="text-secondary" href="/forgot-password.html">
+                  Forgot password ?
+                </a>
+              </div>
+              <button
+                type="submit"
+                class="my-4 btn btn-primary btn-block btn-lg"
+              >
+                Log In
+              </button>
+              <div class="d-flex justify-content-center my-5">
+                <p class="font-weight-bold text-secondary">No account yet ?</p>
+                <a
+                  class="text-dark font-weight-bold ml-2"
+                  role="button"
+                  data-dismiss="modal"
+                  data-toggle="modal"
+                  data-target="#signUp"
+                  >Sign Up</a
+                >
+              </div>
+              <p class="text-secondary text-center">
+                By logging in or creating an account, you agree to company
+                <a href="terms.html">Terms of Service</a> and
+                <a href="privacy-policy.html">Privacy Policy</a> .
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign In Modal ends -->
+
+    <!-- Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signUp"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signUpModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog sign-modal" role="document">
+        <div class="modal-content">
+          <div class="modal-header-custom py-2 px-5">
+            <div class="d-flex justify-content-center">
+              <button
+                id="teacher-btn"
+                onclick="teacherForm()"
+                class="btn h5 rounded-0 font-weight-bold text-dark mx-2 active"
+              >
+                Teacher
+              </button>
+              <button
+                id="student-btn"
+                onclick="studentForm()"
+                class="btn h5 rounded-0 font-weight-bold text-dark mx-2"
+              >
+                Student
+              </button>
+            </div>
+          </div>
+          <div class="modal-body py-3 px-5">
+            <div id="register-form" class="d-block">
+              <!-- Check scripts js to see the student form -->
+              <form action="" method="POST">
+                <div class="form-group mt-4">
+                  <input
+                    type="text"
+                    class="form-control py-4"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="form-group mt-4">
+                  <input
+                    type="text"
+                    class="form-control py-4"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-group mt-4">
+                  <input
+                    type="text"
+                    class="form-control py-4"
+                    placeholder="HP Number"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control py-4"
+                    placeholder="Password"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="my-4 btn btn-primary btn-block btn-lg"
+                >
+                  Sign Up
+                </button>
+              </form>
+            </div>
+
+            <div class="d-flex justify-content-center my-5">
+              <p class="font-weight-bold text-secondary">
+                Already have an account ?
+              </p>
+              <a
+                class="text-dark font-weight-bold ml-2"
+                role="button"
+                data-dismiss="modal"
+                data-toggle="modal"
+                data-target="#signUp"
+                >Log In</a
+              >
+            </div>
+            <p class="text-secondary text-center">
+              By logging in or creating an account, you agree to company
+              <a href="terms.html">Terms of Service</a> and
+              <a href="privacy-policy.html">Privacy Policy</a> .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign Up Modal ends -->
+
+    <!-- Javascript Code -->
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("../templates/home-header.html");
+        $("#footer").load("../templates/footer.html");
+      });
+    </script>
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

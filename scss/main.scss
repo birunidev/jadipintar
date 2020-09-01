@@ -1,0 +1,59 @@
+// utils
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/font";
+
+$theme-colors: (
+  "primary": $primary,
+  "warning": $warning,
+  "success": $success,
+  "dark": $dark,
+);
+
+@import "./vendors/bootstrap";
+
+// Layouts
+@import "./layout/navbar";
+@import "./layout/footer";
+
+// components
+@import "./components/cards";
+@import "./components/modal";
+@import "./components/jumbotron";
+@import "./components/forms";
+
+// Pages
+@import "./pages/about";
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-content {
+  margin: 13em auto 7em;
+}
+.mt-6 {
+  margin-top: 6em;
+}
+.mt-7 {
+  margin-top: 7em;
+}
+.mt-8 {
+  margin-top: 8em;
+}
+.pt-6 {
+  padding: 4em 3em !important;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.section-class {
+  margin: 7em 0em;
+}

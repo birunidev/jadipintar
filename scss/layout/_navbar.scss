@@ -1,0 +1,44 @@
+.custom-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+
+  .navbar-toggler {
+    outline: none;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    i {
+      font-size: 25px !important;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item.active {
+      font-weight: bold;
+    }
+  }
+  .input-container {
+    position: relative;
+    .form-control {
+      border-radius: 70px;
+      padding-left: 40px;
+    }
+    i {
+      position: absolute;
+      color: $primary;
+      left: 20px;
+      @include large-tablet {
+        left: 30px;
+      }
+      @include desktop {
+        left: 35px;
+      }
+      top: 12px;
+    }
+  }
+}

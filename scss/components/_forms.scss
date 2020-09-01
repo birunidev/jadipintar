@@ -1,0 +1,52 @@
+.search-form-home {
+  display: flex;
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .search-input-home {
+    width: 100%;
+    position: relative;
+
+    input {
+      width: 100%;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 40px;
+      border-radius: 20px 0px 0px 20px;
+      border: none;
+      color: $primary;
+      &::placeholder {
+        color: $secondary;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 15px;
+      left: 14px;
+    }
+  }
+  button {
+    width: 30%;
+    @include large-tablet {
+      width: 30%;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    color: white;
+    background: $warning;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+  }
+}
