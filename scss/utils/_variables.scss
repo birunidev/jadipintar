@@ -1,9 +1,10 @@
 $primary: #654794;
 $dark: #484465;
-$secondary: #969696;
+$secondary: #838383;
 $warning: #f5841f;
 $success: #41b649;
 $blue: #508ff4;
+$yellow: #ffaa00;
 
 .bg-blue {
   background: $blue !important;
@@ -14,4 +15,16 @@ $blue: #508ff4;
 
 .bg-dark-transparent {
   background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.text-yellow {
+  color: rgba($color: $yellow, $alpha: 1);
+}
+.text-yellow-light {
+  color: rgba($color: $yellow, $alpha: 0.5);
+}
+.text-warning-hover {
+  &:hover {
+    color: $warning !important;
+  }
 }

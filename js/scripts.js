@@ -106,14 +106,19 @@ const uploadIdInput = document.getElementById("upload-id-input");
 const uploadIjazahBtn = document.getElementById("upload-ijazah-btn");
 const uploadIjazahInput = document.getElementById("upload-ijazah-input");
 
-uploadBtn.addEventListener("click", function () {
-  uploadInput.click();
-});
-uploadIdBtn.addEventListener("click", function () {
-  uploadIdInput.click();
-});
-uploadIjazahBtn.addEventListener("click", function () {
-  uploadIjazahInput.click();
-});
+if (uploadBtn)
+  uploadBtn.addEventListener("click", function () {
+    uploadInput.click();
+  });
+
+if (uploadIdBtn)
+  uploadIdBtn.addEventListener("click", function () {
+    uploadIdInput.click();
+  });
+
+if (uploadIjazahBtn)
+  uploadIjazahBtn.addEventListener("click", function () {
+    uploadIjazahInput.click();
+  });
 
 // upload scripts ends

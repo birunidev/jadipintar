@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37">
+  <g id="yt-circle" transform="translate(-381 -2676)">
+    <g id="Ellipse_202" data-name="Ellipse 202" transform="translate(381 2676)" fill="none" stroke="#4d4d4d" stroke-width="1">
+      <ellipse cx="19" cy="18.5" rx="19" ry="18.5" stroke="none"/>
+      <ellipse cx="19" cy="18.5" rx="18.5" ry="18" fill="none"/>
+    </g>
+    <path id="youtube" d="M31.134,65.779a2.055,2.055,0,0,0-1.463-1.439A50.272,50.272,0,0,0,23.206,64a50.272,50.272,0,0,0-6.465.34,2.056,2.056,0,0,0-1.463,1.439,22.358,22.358,0,0,0,0,7.834,2.026,2.026,0,0,0,1.463,1.416,50.272,50.272,0,0,0,6.465.34,50.272,50.272,0,0,0,6.465-.34,2.026,2.026,0,0,0,1.463-1.416,22.358,22.358,0,0,0,0-7.834ZM21.514,72.1V67.292l4.325,2.4Z" transform="translate(377.158 2624.903)" fill="#4d4d4d" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
