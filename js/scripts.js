@@ -96,3 +96,24 @@ function teacherForm() {
               </form>
   `;
 }
+// register scripts ends
+
+// upload scripts
+const uploadBtn = document.getElementById("upload-photo-btn");
+const uploadInput = document.getElementById("upload-photo-input");
+const uploadIdBtn = document.getElementById("upload-id-btn");
+const uploadIdInput = document.getElementById("upload-id-input");
+const uploadIjazahBtn = document.getElementById("upload-ijazah-btn");
+const uploadIjazahInput = document.getElementById("upload-ijazah-input");
+
+uploadBtn.addEventListener("click", function () {
+  uploadInput.click();
+});
+uploadIdBtn.addEventListener("click", function () {
+  uploadIdInput.click();
+});
+uploadIjazahBtn.addEventListener("click", function () {
+  uploadIjazahInput.click();
+});
+
+// upload scripts ends

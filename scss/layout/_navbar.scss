@@ -42,3 +42,18 @@
     }
   }
 }
+
+#member-second-nav {
+  .navbar-nav {
+    .active::after {
+      content: "";
+      display: block;
+      border-bottom: 5px solid $warning;
+      width: 100%;
+      margin: auto;
+      padding-bottom: 5px;
+      margin-bottom: -8px;
+      transition: 0.2s;
+    }
+  }
+}
