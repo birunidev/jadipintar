@@ -57,3 +57,26 @@
     }
   }
 }
+
+.custom-home-header {
+  background: $dark;
+  transition: 0.4s ease;
+
+  @include large-tablet {
+    background: none;
+  }
+
+  .navbar-nav .active > .nav-link {
+    color: white;
+  }
+  .navbar-nav .nav-link {
+    color: $secondary;
+  }
+}
+.custom-home-header.scrolled {
+  background: $dark;
+
+  .navbar-nav .nav-link {
+    color: white;
+  }
+}

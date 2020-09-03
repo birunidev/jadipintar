@@ -1,8 +1,8 @@
 <header class="custom-header" id="main-header">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-none">
+  <nav class="navbar navbar-expand-lg custom-home-header">
     <div class="container">
-      <a class="navbar-brand font-weight-bold" href="./index.html"></a>
-        <img src="../assets/logo-svg.svg" width="140" />
+      <a class="navbar-brand font-weight-bold" href="./index.html">
+        <img src="../assets/logo-white-yellow.png" width="140" />
       </a>
       <button
         class="navbar-toggler border-0"
@@ -62,3 +62,14 @@
     </div>
   </nav>
 </header>
+<script>
+  const homeHeader = document.querySelector(".custom-home-header");
+
+  document.addEventListener("scroll", function () {
+    if (window.top.scrollY > 100) {
+      homeHeader.classList.add("scrolled");
+    } else {
+      homeHeader.classList.remove("scrolled");
+    }
+  });
+</script>

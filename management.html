@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Teachers | Jadi Pintar</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <!-- Header, get the code from the templates folder -->
+    <div id="header"></div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="active">
+      <button class="pl-3 btn" id="sidebarCollapse">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <a class="navbar-brand font-weight-bold" href="./index.html">
+        <img src="../assets/logo-white-yellow.png" width="140" />
+      </a>
+      <ul class="list-unstyled components mt-3">
+        <li>
+          <a href="dashboard.html">
+            <img
+              src="./assets/dashboard.svg"
+              class="img-fluid mr-2"
+              width="25"
+            />
+            Dashboard</a
+          >
+        </li>
+        <li class="active">
+          <a href="management.html">
+            <img
+              src="./assets/users.svg"
+              class="img-fluid mr-2"
+              width="25"
+              alt=""
+            />
+
+            Management Teachers</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="./assets/dollar.svg"
+              class="img-fluid mr-2"
+              width="25"
+              alt=""
+            />
+            Reviewal</a
+          >
+        </li>
+      </ul>
+      <div class="logout-wrapper">
+        <a href="#" class="text-decoration-none">
+          <img
+            src="./assets/logout.svg"
+            class="img-fluid mr-2"
+            width="25"
+            alt=""
+          />
+          Logout</a
+        >
+      </div>
+    </nav>
+    <!-- Sidebar ends -->
+
+    <!-- Main Content -->
+    <div class="container-fluid sidebar-content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Page title -->
+          <div class="page-title mt-3 text-secondary">
+            <h1 class="h3">Management Teachers</h1>
+          </div>
+          <div
+            class="teacher-profile-dashboard p-4 bg-gray-custom rounded mt-5"
+          >
+            <!-- Dashboard profile -->
+            <div class="row justify-content-between">
+              <div class="col-md-3">
+                <div class="teacher-photo-wrapper mb-4">
+                  <div class="overlay">
+                    <button
+                      class="upload-btn btn"
+                      id="dashboard-upload-photo-btn"
+                    >
+                      Upload photo
+                    </button>
+                    <input
+                      id="dashboard-input-file"
+                      type="file"
+                      style="position: fixed; top: -9999999999px"
+                    />
+                  </div>
+                  <img src="./assets/teacher-dashboard.jpg" alt="" />
+                </div>
+                <button class="btn btn-primary mt-2 btn-block mb-4">
+                  Verifikasi Profil
+                </button>
+              </div>
+              <div class="col-md-9">
+                <ul class="text-secondary">
+                  <li class="teacher-data-text mb-3">
+                    <span class="font-weight-bold">Name</span>
+                    <span>:</span> Jennifer Williams
+                  </li>
+                  <li class="teacher-data-text mb-3">
+                    <span class="font-weight-bold">Email</span>
+                    <span>:</span> example@gmail.com
+                  </li>
+                  <li class="teacher-data-text mb-3">
+                    <span class="font-weight-bold">Phone number</span>
+                    <span>:</span> +62 829 9099 8908
+                  </li>
+                  <li class="teacher-data-text mb-3">
+                    <span class="font-weight-bold">Mata Pelajaran</span>
+                    <span>:</span> Bahasa Indonesia
+                  </li>
+                  <li class="teacher-data-text mb-3">
+                    <span class="font-weight-bold">Kelas</span>
+                    <span>:</span> VII
+                  </li>
+                  <li class="teacher-data-text mb-3">
+                    <span class="font-weight-bold">Kurikulum</span>
+                    <span>:</span> KTSP 13
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dashboard profile ends -->
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="bg-dark text-white">
+                    <tr class="rounded-lg">
+                      <th scope="col">No</th>
+                      <th scope="col">Nama</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">No. Telpon</th>
+                      <th scope="col">Mata Pelajaran</th>
+                      <th scope="col">Kelas</th>
+                      <th scope="col">Kurikulum</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Jennifer William</td>
+                      <td>example@gmail.com</td>
+                      <td>+62 829 9099 8908</td>
+                      <td>Bahasa Indonesia</td>
+                      <td>VII</td>
+                      <td>KTSP 13</td>
+                      <td>
+                        <div class="custom-control custom-switch">
+                          <input
+                            style="cursor: pointer"
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customSwitch1"
+                          />
+                          <label
+                            class="custom-control-label text-white"
+                            style="user-select: none"
+                            for="customSwitch1"
+                            >U</label
+                          >
+                        </div>
+                      </td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                          <i
+                            class="fas fa-pencil-alt text-primary"
+                            style="font-size: 13px"
+                          ></i>
+                          Edit
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content ends -->
+
+    <!-- Modals -->
+
+    <!-- Javascript Code -->
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("../templates/dashboard-header.html");
+        $("#footer").load("../templates/footer.html");
+      });
+    </script>
+    <!-- Custom scrollbar plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal",
+      });
+
+      $("#sidebarCollapse").on("click", function () {
+        $("#sidebar").toggleClass("active");
+      });
+    </script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

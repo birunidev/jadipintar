@@ -170,3 +170,8 @@ $("#modal-cancel-btn").click(function () {
 function showSidebar() {
   $("#sidebar").toggleClass("active");
 }
+
+// dashboard
+$("#dashboard-upload-photo-btn").click(function () {
+  $("#dashboard-input-file").click();
+});

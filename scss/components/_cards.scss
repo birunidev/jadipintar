@@ -102,4 +102,39 @@
 
 .teacher-card {
   max-width: 370px;
+  .card-img-wrapper {
+    overflow: hidden;
+    max-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.why-choose-card {
+  max-width: 300px;
+  margin: 20px auto;
+  border-radius: 3px;
+  border-bottom: 3px solid $primary;
+  color: $secondary;
+  padding-bottom: 2em;
+  min-height: 490px;
+
+  &__img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+    img {
+      width: 100%;
+    }
+  }
+  &__detail {
+    margin-top: 1.5em;
+    text-align: center;
+  }
 }

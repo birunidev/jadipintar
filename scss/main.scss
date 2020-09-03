@@ -71,3 +71,20 @@ ul {
 .tooltip[aria-hidden="false"] {
   opacity: 1;
 }
+
+.section-home {
+  margin: 10em 0px !important;
+}
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  // margin: 3em 0px 2em;
+  color: $secondary;
+}
+
+.btn-outline-warning {
+  &:hover {
+    color: white !important;
+  }
+}
