@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member | Jadi Pintar</title>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <!-- Header, get the code from the templates folder -->
+    <div id="header"></div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+      <div class="row">
+        <div class="col-md-4">
+          <div
+            class="card drop-shadow profile-card border-0 mx-auto mb-5"
+            style="max-width: 18rem"
+          >
+            <div class="py-3 px-5 mx-auto">
+              <img
+                src="./assets/user_photo.png"
+                class="img-fluid"
+                width="150"
+                alt="..."
+              />
+            </div>
+            <div class="card-body">
+              <p class="h3 font-weight-bold text-center card-title">Biruni</p>
+              <hr />
+              <div class="profile-card-detail">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="font-weight-bold m-0">Profil diversifikasi</p>
+                  <i class="fa fa-times-circle text-warning"></i>
+                </div>
+                <p class="text-success d-block my-0">Email</p>
+                <p class="text-danger d-block my-0">Nomor HP</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="demand-card px-5 py-4 drop-shadow bg-white">
+            <h2 class="h4 font-weight-bold mb-5">List kursus saya</h2>
+            <hr />
+            <!-- tidak ada permintaan -->
+            <div class="no-demand d-flex align-items-center">
+              <img
+                src="./assets/zero-demand.svg"
+                class="mr-4"
+                width="50"
+                alt=""
+              />
+              <p class="font-weight-bold text-secondary h5">Tidak ada kursus</p>
+              <button
+                class="btn btn-warning ml-auto text-white font-weight-bold"
+              >
+                Temukan kursus sekarang
+              </button>
+            </div>
+            <!-- ada permintaan -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- Javascript Code -->
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("../templates/member-header.html");
+        $("#footer").load("../templates/footer.html");
+      });
+    </script>
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teachers | Jadi Pintar</title>
     <link rel="stylesheet" href="css/main.css" />
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
@@ -15,7 +16,423 @@
 
     <!-- Main Content -->
 
-    <div class="container main-content"></div>
+    <div class="container main-content">
+      <!-- Video preview -->
+      <div class="row mb-7">
+        <div class="col-md-12">
+          <div class="teacher-video-preview">
+            <!-- thumbnail -->
+            <div class="teacher-video-thumbnail">
+              <div class="overlay">
+                <button class="btn-play rounded-circle" id="teacher-btn-play">
+                  <img src="./assets/play.svg" class="img-fluid" alt="" />
+                </button>
+              </div>
+              <img src="./assets/video-preview.jpg" class="img-fluid" alt="" />
+            </div>
+            <!-- Video preview content -->
+            <video class="teacher-video-content d-none" controls>
+              <source src="./assets/video-sample.mp4" type="video/mp4" />
+
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <!-- Video preview ends -->
+
+      <!-- Teacher information -->
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Teacher profile -->
+          <div class="row mb-5">
+            <div class="col-md-4">
+              <!-- Teacher profile picture and status -->
+              <div class="teacher-profile mr-4">
+                <div class="teacher-profile__img">
+                  <img src="./assets/teacher-single-profile.jpg" alt="" />
+                </div>
+                <div class="teacher-status text-center mt-2 text-secondary">
+                  <!-- change to bg-success if status is online -->
+                  <span class="status-circle bg-secondary"></span>Offline
+                  <p class="text-secondary">Visited 2 hours ago</p>
+                </div>
+              </div>
+            </div>
+            <!-- Teacher details -->
+            <div class="col-md-4">
+              <div class="teacher-details">
+                <div class="teacher-name">
+                  <div
+                    class="d-md-flex align-items-center justify-content-between"
+                  >
+                    <p
+                      class="font-weight-bold text-secondary text-warning-hover h5 mt-0 mb-0"
+                    >
+                      Clara William
+                    </p>
+                    <ul class="mt-0 mb-0">
+                      <li class="d-inline-block">
+                        <i class="fas fa-star text-yellow"></i>
+                      </li>
+                      <li class="d-inline-block">
+                        <i class="fas fa-star text-yellow"></i>
+                      </li>
+                      <li class="d-inline-block">
+                        <i class="fas fa-star text-yellow"></i>
+                      </li>
+                      <li class="d-inline-block">
+                        <i class="fas fa-star text-yellow"></i>
+                      </li>
+                      <li class="d-inline-block">
+                        <i class="fas fa-star text-yellow-light"></i>
+                      </li>
+                      <small>5.0</small>
+                    </ul>
+                  </div>
+                  <p class="text-secondary mt-1">Profesional teachers</p>
+                </div>
+                <div class="teacher-lesson">
+                  <p class="font-weight-bold text-secondary h5 mt-0 mb-0">
+                    Teaches
+                  </p>
+                  <p class="text-secondary mt-1">Bahasa Inggris</p>
+                </div>
+                <div class="teacher-lesson">
+                  <p class="font-weight-bold text-secondary h5 mt-0 mb-0">
+                    Location
+                  </p>
+                  <p class="text-secondary mt-1">Kecamatan kelapa gading</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <!-- About Teacher -->
+          <div class="teacher-about mb-7">
+            <h3 class="text-secondary font-weight-bold">About Me</h3>
+            <p class="text-secondary d-inline-block" id="teacher-about-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex...
+            </p>
+            <a
+              id="teacher-read-more-link"
+              class="text-secondary text-decoration-none read-more-link d-inline-block"
+              >Read more</a
+            >
+          </div>
+          <!-- Teacher lesson -->
+          <div class="teacher-lesson">
+            <h4 class="text-secondary font-weight-bold mb-3">Lesson</h4>
+            <!-- lesson component -->
+            <div class="lesson-comp mb-3">
+              <div class="lesson-detail">
+                <p class="text-dark font-weight-bold">Bahasa Inggris</p>
+                <span class="lesson-separator mb-3"></span>
+                <p class="text-secondary">10 Materi</p>
+              </div>
+              <div class="lesson-cta">
+                <button class="btn btn-primary px-4 rounded-pill">
+                  Rp. 50.000/jam
+                </button>
+              </div>
+            </div>
+            <div class="lesson-comp mb-3">
+              <div class="lesson-detail">
+                <p class="text-dark font-weight-bold">Conversation</p>
+                <span class="lesson-separator mb-3"></span>
+                <p class="text-secondary">Basic Conversation - 10 Lesson</p>
+              </div>
+              <div class="lesson-cta">
+                <button class="btn btn-primary px-4 rounded-pill">
+                  Rp. 50.000/jam
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking UI -->
+        <div class="col-lg-4">
+          <!-- Price info -->
+          <div
+            class="price-info d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <p class="text-secondary">
+                Lesson
+                <button
+                  class="btn btn-sm p-0 d-inline-block"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Tooltip on top"
+                >
+                  <img src="./assets/info-icon.svg" />
+                </button>
+              </p>
+            </div>
+            <div>
+              <small class="text-secondary">FROM</small>
+              <p class="text-secondary">Rp 50.000/Jam</p>
+            </div>
+          </div>
+
+          <!-- Call to Action Buttons -->
+          <div class="cta-buttons w-100 mt-5">
+            <button
+              class="btn btn-primary py-3 mb-4 font-weight-bold btn-block"
+            >
+              Book now
+            </button>
+            <button
+              class="btn btn-outline-primary mb-4 py-3 font-weight-bold btn-block"
+            >
+              Contact teachers
+            </button>
+          </div>
+
+          <div class="scheduler-component text-secondary">
+            <div class="scheduler-wrapper">
+              <div class="current-date-nav">
+                <ul class="d-flex justify-content-between">
+                  <li>
+                    <button class="btn btn-sm" id="prev-month-btn">
+                      <i class="fas fa-angle-left"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <p id="current-month">September</p>
+                  </li>
+                  <li>
+                    <button class="btn btn-sm" id="next-month-btn">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <table class="schedule-table" id="schedule-table-component">
+                  <thead>
+                    <tr id="schedule-days">
+                      <th></th>
+                      <th>
+                        <p class="my-0 text-center">Mon</p>
+                        <p class="my-0 text-center">23</p>
+                      </th>
+                      <th>
+                        <p class="my-0 text-center">Tue</p>
+                        <p class="my-0 text-center">24</p>
+                      </th>
+                      <th>
+                        <p class="my-0 text-center">Wed</p>
+                        <p class="my-0 text-center">25</p>
+                      </th>
+                      <th>
+                        <p class="my-0 text-center">Thu</p>
+                        <p class="my-0 text-center">26</p>
+                      </th>
+                      <th>
+                        <p class="my-0 text-center">Fri</p>
+                        <p class="my-0 text-center">27</p>
+                      </th>
+                      <th>
+                        <p class="my-0 text-center">Sat</p>
+                        <p class="my-0 text-center">28</p>
+                      </th>
+                      <th>
+                        <p class="my-0 text-center">Sun</p>
+                        <p class="my-0 text-center">29</p>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="mt-4">
+                    <tr>
+                      <td class="pl-2">00 - 04</td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pl-2">04 - 08</td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pl-2">08 - 12</td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn booked"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pl-2">12 - 16</td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pl-2">16 - 20</td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="pl-2">20 - 24</td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button
+                          class="availability-btn has-availability"
+                        ></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                      <td class="availability">
+                        <button class="availability-btn"></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="scheduler-preview mt-6">
+            <button
+              class="btn btn-outline-warning py-3 font-weight-bold btn-block"
+              data-toggle="modal"
+              data-target="#availibilityModal"
+            >
+              Check available
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <hr />
     <footer class="mt-5 pb-5">
@@ -111,6 +528,285 @@
         </div>
       </div>
     </footer>
+
+    <!-- Availibility Modal -->
+    <div
+      class="modal fade"
+      id="availibilityModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="availibilityModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog sign-modal modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-5">
+            <p class="h5 font-weight-bold text-dark" id="avail-modal-title">
+              Cek ketersediaan
+            </p>
+          </div>
+          <div class="modal-body py-3 px-5">
+            <div id="scheduler-modal-component">
+              <div class="row mb-5">
+                <div class="col-md-5">
+                  <select name="" id="" class="form-control">
+                    <option value="Agustus 2020">Agustus 2020</option>
+                  </select>
+                </div>
+              </div>
+              <ul class="d-md-flex">
+                <li class="mr-3">
+                  <span class="circle-book has-availability"></span> Available
+                </li>
+                <li class="mr-3">
+                  <span class="circle-book booked"></span> Booked
+                </li>
+                <li class="mr-3">
+                  <span class="circle-book no-availability"></span> No Available
+                </li>
+                <li class="mr-3">
+                  <span class="circle-book your-book"></span> Book by you
+                </li>
+              </ul>
+              <div class="scheduler-component text-secondary">
+                <div class="scheduler-wrapper">
+                  <div class="table-responsive">
+                    <table
+                      class="table schedule-table w-100"
+                      id="schedule-table-component"
+                    >
+                      <thead>
+                        <tr id="schedule-days">
+                          <th></th>
+                          <td>
+                            <p class="my-0 text-center pb-2">Tue, Jul 14</p>
+                          </td>
+                          <td>
+                            <p class="my-0 text-center pb-2">Wed, Jul 14</p>
+                          </td>
+                          <td>
+                            <p class="my-0 text-center pb-2">Thu, Jul 14</p>
+                          </td>
+                          <td>
+                            <p class="my-0 text-center pb-2">Fri, Jul 14</p>
+                          </td>
+                          <td>
+                            <p class="my-0 text-center pb-2">Sat, Jul 14</p>
+                          </td>
+                          <td>
+                            <p class="my-0 text-center pb-2">Sun, Jul 14</p>
+                          </td>
+                          <td>
+                            <p class="my-0 text-center pb-2">Mon, Jul 14</p>
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody class="mt-4">
+                        <tr>
+                          <td class="px-2 py-3">10.30</td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-2 py-3">11.00</td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-2 py-3">11.30</td>
+                          <td class="availability">
+                            <button class="availability-btn your-book"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn your-book"></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn booked"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-2 py-3">12.00</td>
+                          <td class="availability">
+                            <button class="availability-btn your-book"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn your-book"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-2 py-3">12.30</td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-2 py-3">14.00</td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button
+                              class="availability-btn has-availability"
+                            ></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                          <td class="availability">
+                            <button class="availability-btn"></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-none summary-booking-wrapper">
+              <ul>
+                <li>Subject: Matematika</li>
+                <li>Date: 20 Agustus 2020</li>
+                <li>Time: 08:00 - 09:00</li>
+                <li>Price: Rp. 50.000,00</li>
+              </ul>
+              <p class="mt-4">Pay</p>
+              <p>Please transfer to BCA: 080289042</p>
+            </div>
+          </div>
+          <div
+            class="modal-footer d-flex justify-content-center align-items-center"
+          >
+            <button
+              class="btn btn-lg btn-block btn-primary py-3 mt-4 mb-4"
+              id="modal-book-btn"
+            >
+              Book now
+            </button>
+            <button
+              class="btn btn-lg btn-outline-primary py-2 mt-4 mb-4 d-none"
+              id="modal-cancel-btn"
+            >
+              Back
+            </button>
+            <button
+              class="btn btn-lg btn-warning text-white py-2 mt-4 mb-4 d-none"
+              id="modal-confirm-btn"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Availibility Modal ends -->
 
     <!-- Sign In Modal -->
     <div
@@ -281,13 +977,22 @@
 
     <!-- Javascript Code -->
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/moment.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
     <script>
       $(document).ready(function () {
         $("#header").load("../templates/header.html");
         $("#footer").load("../templates/footer.html");
       });
     </script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/scheduler.js"></script>
+
     <script src="./js/scripts.js"></script>
   </body>
 </html>

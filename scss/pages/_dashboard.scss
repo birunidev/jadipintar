@@ -1,0 +1,15 @@
+.teacher-photo-wrapper {
+  position: relative;
+
+  max-width: 200px;
+
+  .overlay {
+    position: absolute;
+    background: rgba($color: #000000, $alpha: 0.5);
+    height: 100%;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+}

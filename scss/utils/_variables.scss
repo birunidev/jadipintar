@@ -1,10 +1,12 @@
 $primary: #654794;
 $dark: #484465;
+$semi-dark: #585479;
 $secondary: #838383;
 $warning: #f5841f;
 $success: #41b649;
 $blue: #508ff4;
 $yellow: #ffaa00;
+$gray-bg: #ebebeb;
 
 .bg-blue {
   background: $blue !important;
@@ -27,4 +29,8 @@ $yellow: #ffaa00;
   &:hover {
     color: $warning !important;
   }
+}
+
+.bg-gray-custom {
+  background: $gray-bg;
 }

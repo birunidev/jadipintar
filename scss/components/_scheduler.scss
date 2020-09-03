@@ -1,0 +1,59 @@
+.scheduler-component {
+  .schedule-table {
+    width: 100%;
+    tbody {
+      td {
+        border: 1px solid rgba($color: $secondary, $alpha: 0.3);
+        height: 40px;
+      }
+    }
+
+    .availability {
+      // min-height: 30px;
+      background: white;
+      padding: 0px;
+
+      .availability-btn {
+        width: 100%;
+        padding: 0px;
+        margin: 0px !important;
+        border: none;
+        display: block;
+        background: white;
+        height: 100%;
+      }
+    }
+  }
+  .days {
+    .day {
+      p {
+        text-align: center !important;
+      }
+      margin: 10px 0px;
+    }
+  }
+}
+
+.has-availability {
+  background: #7ec937;
+}
+.your-book {
+  background: #cff1c2;
+}
+.no-availability {
+  background: white;
+}
+.booked {
+  background: #d5d5d5;
+}
+
+.circle-book {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.circle-book.no-availability {
+  border: 1px solid $secondary;
+}

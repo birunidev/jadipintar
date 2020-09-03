@@ -1,0 +1,89 @@
+#sidebar {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: $dark;
+  color: #fff;
+  transition: all 0.3s;
+  margin-left: -300px;
+  display: none;
+}
+
+#sidebar.active {
+  margin-left: 0px;
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    display: block;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba($color: $dark, $alpha: 0.8);
+}
+
+.logout-wrapper {
+  border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
+  padding: 30px 15px;
+  position: relative;
+  bottom: -350px;
+  a {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: white;
+  }
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+#sidebar ul li {
+  padding: 10px 15px;
+}
+
+#sidebar ul li a {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+#sidebar ul li a:hover {
+  color: white;
+  background: $semi-dark;
+  border-radius: 30px;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  border-radius: 30px;
+  color: #fff;
+  background: $semi-dark;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: $dark;
+}
+
+.sidebar-content {
+  margin-top: 6em;
+  transition: all 0.3s;
+  margin-left: 20px;
+  max-width: 1000px;
+}
+
+#sidebar.active ~ .sidebar-content {
+  margin-left: 330px;
+}

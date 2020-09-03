@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member | Jadi Pintar</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body>
+    <!-- Header, get the code from the templates folder -->
+    <div id="header"></div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="active">
+      <button class="pl-3 btn" id="sidebarCollapse">
+        <i class="fas fa-bars text-white"></i>
+      </button>
+      <a class="navbar-brand font-weight-bold" href="./index.html">
+        <img src="../assets/logo-white-yellow.png" width="140" />
+      </a>
+      <ul class="list-unstyled components mt-3">
+        <li>
+          <a href="dashboard.html">
+            <img
+              src="./assets/dashboard.svg"
+              class="img-fluid mr-2"
+              width="25"
+            />
+            Dashboard</a
+          >
+        </li>
+        <li class="active">
+          <a href="management.html">
+            <img
+              src="./assets/users.svg"
+              class="img-fluid mr-2"
+              width="25"
+              alt=""
+            />
+
+            Management Teachers</a
+          >
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="./assets/dollar.svg"
+              class="img-fluid mr-2"
+              width="25"
+              alt=""
+            />
+            Reviewal</a
+          >
+        </li>
+      </ul>
+      <div class="logout-wrapper">
+        <a href="#">
+          <img
+            src="./assets/logout.svg"
+            class="img-fluid mr-2"
+            width="25"
+            alt=""
+          />
+          Logout</a
+        >
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid sidebar-content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-title mt-3 text-secondary">
+            <h1 class="h3">Management Teachers</h1>
+          </div>
+          <div
+            class="teacher-profile-dashboard p-4 bg-gray-custom rounded mt-5"
+          >
+            <div class="row">
+              <div class="col-md-4">
+                <div class="teacher-photo-wrapper">
+                  <div class="overlay">
+                    <button class="upload-btn" id="dashboard-upload-photo-btn">
+                      upload photo
+                    </button>
+                  </div>
+                  <img src="./assets/teacher-dashboard.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- Javascript Code -->
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#header").load("../templates/dashboard-header.html");
+        $("#footer").load("../templates/footer.html");
+      });
+    </script>
+    <!-- Custom scrollbar plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal",
+      });
+
+      $("#sidebarCollapse").on("click", function () {
+        $("#sidebar").toggleClass("active");
+      });
+    </script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

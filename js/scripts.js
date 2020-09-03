@@ -122,3 +122,51 @@ if (uploadIjazahBtn)
   });
 
 // upload scripts ends
+
+// Video scripts
+const teacherVidThumbnail = document.querySelector(".teacher-video-thumbnail");
+const teacherVidContent = document.querySelector(".teacher-video-content");
+const teacherBtnPlay = document.getElementById("teacher-btn-play");
+function showVideo() {
+  if (teacherVidThumbnail) teacherVidThumbnail.classList.add("d-none");
+  if (teacherVidContent) {
+    teacherVidContent.classList.remove("d-none");
+    teacherVidContent.classList.add("d-block");
+    teacherVidContent.play();
+  }
+}
+if (teacherVidThumbnail)
+  teacherVidThumbnail.addEventListener("click", showVideo);
+if (teacherBtnPlay) teacherBtnPlay.addEventListener("click", showVideo);
+
+// poppers
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+// Availability Modal
+const modalBookBtn = $("#modal-book-btn");
+modalBookBtn.click(function () {
+  $(this).toggleClass("d-none");
+  $("#modal-cancel-btn").toggleClass("d-none");
+  $("#modal-confirm-btn").toggleClass("d-none");
+  $("#scheduler-modal-component").toggleClass("d-none");
+  $("#avail-modal-title").text("Summary of Booking order");
+  $(".summary-booking-wrapper").toggleClass("d-none");
+});
+
+$("#modal-cancel-btn").click(function () {
+  $(this).toggleClass("d-none");
+  $("#modal-confirm-btn").toggleClass("d-none");
+  modalBookBtn.toggleClass("d-none");
+  $("#scheduler-modal-component").toggleClass("d-none");
+  $("#avail-modal-title").text("Cek ketersediaan");
+  $(".summary-booking-wrapper").toggleClass("d-none");
+});
+
+// Availability Modal Ends
+
+// sidebar
+function showSidebar() {
+  $("#sidebar").toggleClass("active");
+}
