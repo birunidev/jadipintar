@@ -7500,6 +7500,10 @@ ul ul a {
     .search-form-home button:focus, .search-form-home button:active {
       outline: none; }
 
+.day-checkbox {
+  transform: scale(1.5);
+  color: #484465; }
+
 .scheduler-component .schedule-table {
   width: 100%; }
   .scheduler-component .schedule-table tbody td {

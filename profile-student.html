@@ -6,7 +6,7 @@
     <title>Member | Jadi Pintar</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" />
-    <script src="https:kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
   <body>
@@ -14,11 +14,11 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <div class="container main-content" id="profile-vue-app">
+    <div class="container main-content">
       <div class="row">
         <div class="col-md-4">
           <div
-            class="card drop-shadow profile-card border-0 mx-auto mb-5 px-2"
+            class="card drop-shadow profile-card border-0 mx-auto mb-5 px-3"
             style="max-width: 18rem"
           >
             <div class="py-2 text-center">
@@ -142,171 +142,6 @@
             </form>
             <div class="card-body"></div>
           </div>
-
-          <!-- Jam ketersediaan mengajar -->
-          <div class="card drop-shadow profile-card border-0 mx-auto mb-5 px-3">
-            <div class="py-2 text-center">
-              <p class="font-weight-bold">Jam ketersediaan mengajar</p>
-            </div>
-            <form action="">
-              <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-9 col-xl-8">
-                  <div id="teacher-available-times">
-                    <div
-                      class="form-group form-check mb-3"
-                      v-for="time in teacher_times"
-                      :key="time.id"
-                    >
-                      <input
-                        type="checkbox"
-                        class="form-check-input day-checkbox"
-                        id="time.dayId"
-                        value="Senin"
-                        checked
-                        @change="changeCheckbox(time.id)"
-                        v-if="time.isChecked"
-                      />
-
-                      <label class="form-check-label" v-if="time.isChecked"
-                        >[[time.day]]</label
-                      >
-                      <input
-                        type="checkbox"
-                        class="form-check-input day-checkbox"
-                        id="time.dayId"
-                        value="Senin"
-                        @change="changeCheckbox(time.id)"
-                        v-if="!time.isChecked"
-                      />
-
-                      <label class="form-check-label" v-if="!time.isChecked"
-                        >[[time.day]]</label
-                      >
-                      <ul
-                        class="teacher-time-availability"
-                        id="time.dayId"
-                        v-if="time.isChecked"
-                      >
-                        <li class="my-3">
-                          <div
-                            class="mb-3"
-                            v-for="avail_time in time.times"
-                            :key="time.id + avail_time.id"
-                          >
-                            <div
-                              class="row align-items-center"
-                              v-if="avail_time.isEdit"
-                            >
-                              <div class="col-xl-4">
-                                <label>Dari jam</label>
-                                <input
-                                  v-model="avail_time.hour1"
-                                  class="form-control"
-                                />
-                              </div>
-                              <div class="col-xl-4">
-                                <label>Sampai jam</label>
-                                <input
-                                  v-model="avail_time.hour2"
-                                  class="form-control"
-                                />
-                              </div>
-                              <div class="col-xl-4">
-                                <button
-                                  type="button"
-                                  class="btn btn-sm btn-link text-warning my-0 py-0 edit-time-btn"
-                                  @click="editTimes(time.id, avail_time.id)"
-                                >
-                                  Simpan
-                                </button>
-                              </div>
-                            </div>
-                            <div
-                              class="row justify-content-start"
-                              v-else-if="!avail_time.isEdit"
-                            >
-                              <div class="col-sm-4">
-                                <p class="my-0 p-0">
-                                  [[avail_time.hour1 + ' - ' +
-                                  avail_time.hour2]]
-                                </p>
-                              </div>
-                              <div class="col-sm-2">
-                                <button
-                                  type="button"
-                                  class="btn btn-sm btn-link text-warning my-0 py-0 edit-time-btn"
-                                  @click="editTimes(time.id, avail_time.id)"
-                                  v-if="!avail_time.isEdit"
-                                >
-                                  Edit
-                                </button>
-                              </div>
-                              <div class="col-sm-2">
-                                <button
-                                  type="button"
-                                  class="btn btn-sm btn-link text-danger my-0 py-0 delete-time-btn"
-                                  @click="deleteTimes(time.id,avail_time.id)"
-                                >
-                                  Hapus
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <div v-if="time.isChecked">
-                        <div class="row" v-if="time.isAdding">
-                          <div class="col-md-12 col-xl-4">
-                            <label>Dari jam</label>
-                            <input v-model="hour1" class="form-control" />
-                          </div>
-                          <div class="col-md-12 col-xl-4">
-                            <label>Sampai jam</label>
-                            <input v-model="hour2" class="form-control" />
-                          </div>
-                          <div
-                            class="col-md-12 col-lg-4 align-self-end mt-4 mt-xl-0 d-flex"
-                          >
-                            <button
-                              @click="saveTimes(time.id)"
-                              type="button"
-                              class="btn btn-link text-success my-0 mr-2"
-                            >
-                              Simpan
-                            </button>
-                            <button
-                              @click="changeAddStatus(time.id)"
-                              type="button"
-                              class="btn btn-link text-danger my-0"
-                            >
-                              x
-                            </button>
-                          </div>
-                        </div>
-                        <button
-                          @click="changeAddStatus(time.id)"
-                          type="button"
-                          v-if="!time.isAdding"
-                          class="btn btn-link text-success mt-3"
-                        >
-                          <i class="fas fa-plus text-success"></i> Tambah jam
-                          mengajar
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-lg btn-primary btn-block"
-                  >
-                    Simpan
-                  </button>
-                </div>
-              </div>
-            </form>
-            <div class="card-body"></div>
-          </div>
-
           <!-- Identitas -->
           <div class="card drop-shadow profile-card border-0 mx-auto mb-5 px-3">
             <div class="py-2 text-center">
@@ -479,7 +314,5 @@
     </script>
 
     <script src="./js/scripts.js"></script>
-    <script src="./js/vue.js"></script>
-    <script src="./js/teacher_availability.js"></script>
   </body>
 </html>
