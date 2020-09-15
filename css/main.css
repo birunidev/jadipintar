@@ -7567,7 +7567,8 @@ ul ul a {
     background: rgba(0, 0, 0, 0.3); }
 
 .teacher-video-content {
-  width: 100%; }
+  width: 100%;
+  height: 600px; }
 
 .btn-play {
   background: none;
